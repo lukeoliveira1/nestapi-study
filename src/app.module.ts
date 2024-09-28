@@ -2,8 +2,6 @@ import { Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { StateController } from './state/state.controller';
-import { StateService } from './state/state.service';
 import { StateModule } from './state/state.module';
 import { CityModule } from './city/city.module';
 import { AddressModule } from './address/address.module';
