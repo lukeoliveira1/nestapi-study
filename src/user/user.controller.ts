@@ -27,4 +27,9 @@ export class UserController {
   async create(@Body() user: CreateUserDto): Promise<CreateUserDto> {
     return await this.userService.create(user);
   }
+
+  @Get(':id')
+  async findById(id: number): Promise<ReturnUserDto> {
+    return new ReturnUserDto(await this.userService.findByIdUsingRelations(id));
+  }
 }
