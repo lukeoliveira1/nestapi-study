@@ -1,10 +1,11 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { DeleteResult, Repository } from 'typeorm';
 import { AddressEntity } from './entities/address.entity';
 import { CreateAddressDto } from './dtos/createAddress.dto';
 import { UserService } from 'src/user/user.service';
 import { CityService } from 'src/city/city.service';
+import { UpdateAddressDto } from './dtos/updateAddress.dto';
 
 @Injectable()
 export class AddressService {
@@ -25,6 +26,41 @@ export class AddressService {
     return this.addressRepository.save({
       ...createAddressDto,
       userId,
+    });
+  }
+
+  async findAll(): Promise<AddressEntity[]> {
+    return await this.addressRepository.find();
+  }
+
+  async findById(id: number): Promise<AddressEntity> {
+    const address = await this.addressRepository.findOne({
+      where: { id },
+    });
+
+    if (!address) {
+      throw new NotFoundException('Address not found');
+    }
+
+    return address;
+  }
+
+  async delete(id: number): Promise<DeleteResult> {
+    await this.findById(id);
+
+    return this.addressRepository.delete(id);
+  }
+
+  async update(id: number, data: UpdateAddressDto): Promise<AddressEntity> {
+    const product = await this.findById(id);
+
+    if (!product) {
+      throw new NotFoundException('Address not found');
+    }
+
+    return this.addressRepository.save({
+      ...product,
+      ...data,
     });
   }
 }
