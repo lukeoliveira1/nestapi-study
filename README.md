@@ -39,6 +39,8 @@ This project is an API developed in NestJS that provides functionalities for man
 
 - Caching Mechanism: Utilization of a caching module to enhance performance, particularly for frequently accessed data such as city and state lookups.
 
+- Swagger Documentation: Integrated Swagger for interactive API documentation, making it easy to explore and test the API endpoints.
+  
 ## Project setup
 
 ```bash
