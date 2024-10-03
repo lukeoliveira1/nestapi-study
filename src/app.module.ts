@@ -8,6 +8,7 @@ import { AddressModule } from './address/address.module';
 import { CacheModule } from './cache/cache.module';
 import { AuthModule } from './auth/auth.module';
 import { AuthGuard } from './auth/auth.guard';
+import { ViaCepModule } from './viacep/viacep.module';
 
 @Module({
   imports: [
@@ -32,6 +33,7 @@ import { AuthGuard } from './auth/auth.guard';
     AddressModule,
     CacheModule,
     AuthModule,
+    ViaCepModule,
   ],
   controllers: [],
   providers: [
