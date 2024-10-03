@@ -60,4 +60,8 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Accessing Swagger Documentation
+```
+http://localhost:3000/api
+```
 
