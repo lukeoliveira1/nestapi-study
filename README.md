@@ -22,9 +22,22 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## NestAPI-study
+
+This project is an API developed in NestJS that provides functionalities for managing addresses, users, and authentication. 
+
+- ViaCEP API Integration: Allows verification and lookup of addresses using the CEP, facilitating location data validation.
+
+- Address CRUD Operations: Implementation of Create, Read, Update, and Delete (CRUD) operations to manage addresses associated with users.
+
+- Flexible Authentication: Support for user authentication with and without JWT tokens, providing security and flexibility in API access.
+
+- Custom Token-Based Decorators: Creation of decorators to control access to endpoints based on token validation, enhancing security and authorization.
+  
+- Data Integrity Validations: Comprehensive checks during address creation and user registration to ensure data integrity and consistency.
+
+- Caching Mechanism: Utilization of a caching module to enhance performance, particularly for frequently accessed data such as city and state lookups.
 
 ## Project setup
 
@@ -45,41 +58,4 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Run tests
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
